@@ -5,10 +5,14 @@ import java.util.*;
 		 //System.out.printf("C%04d",contactID);
 		 return String.format("C%04d",contactID) ;
 	}
-	public static void cheakNumber(String phonenumber){
+	public static void cheakPhoneNumber(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("number :");
+        String phonenumber = input.nextLine();
 		String regex = "^07[0-1,2,4,5,6,7,8]\\d{7}$";
 		if (!phonenumber.matches(regex)) {
-            System.out.println("Valid Sri Lankan Phone Number");
+            System.out.println("InValid  Phone Number");
+            cheakPhoneNumber();
         } 
 	}
 	 public static void printContact(){
@@ -22,9 +26,7 @@ import java.util.*;
          System.out.println("\n\n");
          System.out.print("Name :");
          String name = input.nextLine();
-         System.out.print("number :");
-         String phonenumber = input.nextLine();
-         cheakNumber(phonenumber);
+        cheakPhoneNumber();
         
         
         
