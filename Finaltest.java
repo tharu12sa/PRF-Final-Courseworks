@@ -5,14 +5,14 @@ import java.util.*;
 		 //System.out.printf("C%04d",contactID);
 		 return String.format("C%04d",contactID) ;
 	}
-	public static void cheakPhoneNumber(){
+	public static void PhoneNumber(){
         Scanner input = new Scanner(System.in);
         System.out.print("number :");
         String phonenumber = input.nextLine();
 		String regex = "^07[0-1,2,4,5,6,7,8]\\d{7}$";
 		if (!phonenumber.matches(regex)) {
             System.out.println("InValid  Phone Number");
-            cheakPhoneNumber();
+            PhoneNumber();
         } 
 	}
 	 public static void printContact(){
@@ -26,7 +26,7 @@ import java.util.*;
          System.out.println("\n\n");
          System.out.print("Name :");
          String name = input.nextLine();
-        cheakPhoneNumber();
+        PhoneNumber();
         
         
         
