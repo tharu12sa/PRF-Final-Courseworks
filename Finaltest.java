@@ -14,8 +14,8 @@ class Finaltest {
             System.out.print("number :");
             String phonenumber = input.nextLine();
             String regex = "^07[0-1,2,4,5,6,7,8]\\d{7}$";
-            if (phonenumber.matches(regex)){
-                return ;
+            if (phonenumber.matches(regex)) {
+                return;
             }
             System.out.println("\t\tInValid  Phone Number");
             System.out.print("Do you want add phone number again (Y/N) : ");
