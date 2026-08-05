@@ -44,6 +44,10 @@ class Finaltest {
         System.out.print("Name :");
         String name = input.nextLine();
         PhoneNumber();
+        System.out.print("Company Name :");
+        String  comName = input.nextLine();
+        System.out.print("Salary :");
+        int salary = input.nextInt();
 
     }
 
