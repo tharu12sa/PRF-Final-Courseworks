@@ -3,6 +3,12 @@ import java.util.*;
 import java.util.Scanner;
 
 class Finaltest {
+    public static String [] conId = new String[5];
+    public static String [] conName = new String[5];
+    public static String [] conponeNumber = new String[5];
+    public static String [] conCompany = new String[5];
+    public static String [] conBirthday = new String[5];
+
     public static int contactID = 0;
 
     public static String ContactID() {
