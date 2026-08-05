@@ -25,6 +25,7 @@ class Finaltest {
                 input.nextLine();
             }else if (answer=='n' || answer=='N'){
                 printMenu();
+                return;
             }
             
         }
