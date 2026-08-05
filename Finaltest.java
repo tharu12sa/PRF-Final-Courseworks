@@ -98,6 +98,7 @@ class Finaltest {
         int salary = input.nextInt();
         // System.out.print("B'Day(YYYY-MM-DD) :");
         birthDay();
+        System.out.println("contac has been add succesfully");
     }
 
     public static void printMenu() {
