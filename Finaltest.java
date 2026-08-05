@@ -1,4 +1,6 @@
+import java.time.LocalDate;
 import java.util.*;
+import java.util.Scanner;
 
 class Finaltest {
     public static int contactID = 0;
@@ -7,9 +9,39 @@ class Finaltest {
         // System.out.printf("C%04d",contactID);
         return String.format("C%04d", contactID);
     }
-    public static void  brithDay(){
-        
+
+    public static void birthDay() {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter Birthday (YYYY-MM-DD): ");
+            String birthday = input.nextLine();
+            try {
+                // Format එක සහ Date එක නිවැරදිද බලනවා
+                java.time.LocalDate bday = java.time.LocalDate.parse(birthday);
+
+                // අනාගත දිනයක්ද බලනවා
+                if (bday.isAfter(java.time.LocalDate.now())) {
+                    System.out.println("Invalid Birthday!");
+                    System.out.print("Do you want Birthday again (Y/N) : ");
+                    char answer = input.next().charAt(0);
+                if (answer == 'y' || answer == 'Y') {
+                    input.nextLine();
+                } else if (answer == 'n' || answer == 'N') {
+                    printMenu();
+                return;
+                }
+            }
+
+                
+                break;
+
+            } 
+        }
+
     }
+
+    }
+
     public static void PhoneNumber() {
         Scanner input = new Scanner(System.in);
         while (true) {
@@ -23,13 +55,13 @@ class Finaltest {
             System.out.print("Do you want add phone number again (Y/N) : ");
             char answer = input.next().charAt(0);
             // input.nextLine();
-            if(answer=='y' || answer=='Y' ){
+            if (answer == 'y' || answer == 'Y') {
                 input.nextLine();
-            }else if (answer=='n' || answer=='N'){
+            } else if (answer == 'n' || answer == 'N') {
                 printMenu();
                 return;
             }
-            
+
         }
     }
 
@@ -47,11 +79,11 @@ class Finaltest {
         String name = input.nextLine();
         PhoneNumber();
         System.out.print("Company Name :");
-        String  comName = input.nextLine();
+        String comName = input.nextLine();
         System.out.print("Salary :");
         int salary = input.nextInt();
         // System.out.print("B'Day(YYYY-MM-DD) :");
-        brithDay();
+        birthDay();
     }
 
     public static void printMenu() {
