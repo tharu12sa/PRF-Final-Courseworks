@@ -7,7 +7,9 @@ class Finaltest {
         // System.out.printf("C%04d",contactID);
         return String.format("C%04d", contactID);
     }
-
+    public static void  brithDay(){
+        
+    }
     public static void PhoneNumber() {
         Scanner input = new Scanner(System.in);
         while (true) {
@@ -48,7 +50,8 @@ class Finaltest {
         String  comName = input.nextLine();
         System.out.print("Salary :");
         int salary = input.nextInt();
-
+        // System.out.print("B'Day(YYYY-MM-DD) :");
+        brithDay();
     }
 
     public static void printMenu() {
