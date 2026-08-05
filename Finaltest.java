@@ -18,7 +18,6 @@ class Finaltest {
             try {
                 // Format එක සහ Date එක නිවැරදිද බලනවා
                 java.time.LocalDate bday = java.time.LocalDate.parse(birthday);
-
                 // අනාගත දිනයක්ද බලනවා
                 if (bday.isAfter(java.time.LocalDate.now())) {
                     System.out.println("Invalid Birthday!");
