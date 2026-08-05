@@ -20,7 +20,13 @@ class Finaltest {
             System.out.println("\t\tInValid  Phone Number");
             System.out.print("Do you want add phone number again (Y/N) : ");
             char answer = input.next().charAt(0);
-            input.nextLine();
+            // input.nextLine();
+            if(answer=='y' || answer=='Y' ){
+                input.nextLine();
+            }else if (answer=='n' || answer=='N'){
+                printMenu();
+            }
+            
         }
     }
 
