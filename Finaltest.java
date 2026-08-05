@@ -10,51 +10,50 @@ class Finaltest {
         return String.format("C%04d", contactID);
     }
 
-  public static void birthDay() {
-    Scanner input = new Scanner(System.in);
-    while (true) {
-        System.out.print("Enter Birthday (YYYY-MM-DD): ");
-        String birthday = input.nextLine();
+    public static void birthDay() {
+        Scanner input = new Scanner(System.in);
+        while (true) {
+            System.out.print("Enter Birthday (YYYY-MM-DD): ");
+            String birthday = input.nextLine();
 
-        try {
-            // Format එක සහ Date එක නිවැරදිද බලනවා (වැරදි නම් catch එකට යනවා)
-            java.time.LocalDate bday = java.time.LocalDate.parse(birthday);
+            try {
+                // Format එක සහ Date එක නිවැරදිද බලනවා (වැරදි නම් catch එකට යනවා)
+                java.time.LocalDate bday = java.time.LocalDate.parse(birthday);
 
-            // අනාගත දිනයක්ද බලනවා
-            if (bday.isAfter(java.time.LocalDate.now())) {
-                System.out.println("\t\tInvalid Birthday!");
+                // අනාගත දිනයක්ද බලනවා
+                if (bday.isAfter(java.time.LocalDate.now())) {
+                    System.out.println("\t\tInvalid Birthday!");
+                    System.out.print("Do you want Birthday again (Y/N) : ");
+                    char answer = input.next().charAt(0);
+
+                    if (answer == 'y' || answer == 'Y') {
+                        input.nextLine(); // Clear buffer
+                        continue; // නැවත Birthday එක ඉල්ලන්න
+                    } else if (answer == 'n' || answer == 'N') {
+                        printMenu();
+                        return;
+                    }
+                } else {
+                    // නිවැරදි දිනයක් නම් Loop එකෙන් එලියට යනවා
+                    break;
+                }
+
+            } catch (Exception e) {
+                // YYYY-MM-DD නොවන හෝ නැති දින (උදා: 20090-30-10) දුන්නාම මෙතනට එනවා
+                System.out.println("\t\tInvalid Birthday Format!");
                 System.out.print("Do you want Birthday again (Y/N) : ");
                 char answer = input.next().charAt(0);
 
                 if (answer == 'y' || answer == 'Y') {
                     input.nextLine(); // Clear buffer
-                    continue; // නැවත Birthday එක ඉල්ලන්න
+                    continue;
                 } else if (answer == 'n' || answer == 'N') {
                     printMenu();
                     return;
                 }
-            } else {
-                // නිවැරදි දිනයක් නම් Loop එකෙන් එලියට යනවා
-                break;
-            }
-
-        } catch (Exception e) {
-            // YYYY-MM-DD නොවන හෝ නැති දින (උදා: 20090-30-10) දුන්නාම මෙතනට එනවා
-            System.out.println("\t\tInvalid Birthday Format!");
-            System.out.print("Do you want Birthday again (Y/N) : ");
-            char answer = input.next().charAt(0);
-
-            if (answer == 'y' || answer == 'Y') {
-                input.nextLine(); // Clear buffer
-                continue;
-            } else if (answer == 'n' || answer == 'N') {
-                printMenu();
-                return;
             }
         }
     }
-}
-    
 
     public static void PhoneNumber() {
         Scanner input = new Scanner(System.in);
