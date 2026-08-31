@@ -31,8 +31,8 @@ class Finaltest {
 
                     if (answer == 'y' || answer == 'Y') {
                         continue;
-                    } else {
-                        return null; // Menu එකට යන්න null යවනවා
+                    } else if (answer == 'n' || answer == 'N') {
+                        return null;
                     }
                 } else {
                     return birthday;
