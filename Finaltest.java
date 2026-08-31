@@ -136,6 +136,8 @@ class Finaltest {
         System.out.println("\nContact has been added successfully!\n");
     }
 
+    public static void updateContact(){}
+
     public static void printMenu() {
         Scanner input = new Scanner(System.in);
         // iFRIEND Header
@@ -177,6 +179,9 @@ class Finaltest {
                 printContact();
                 // printMenu();
                 break;
+            case 2 :{
+                updateContact();
+            }
             }
         }
     }
