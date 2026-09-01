@@ -185,6 +185,7 @@ class Finaltest {
             }
         case 2 :{
                 updateContact();
+                break;
             }
         }
     }
@@ -192,7 +193,7 @@ class Finaltest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         printMenu();
-        System.out.println(conId[0]);
+        // System.out.println(conId[0]);
 
     }
 }
