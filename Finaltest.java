@@ -74,7 +74,6 @@ class Finaltest {
         }
     }
 
-
     public static void addContact(String id, String name, String phone, String company, String birthday) {
         String[] tempConId = new String[conId.length + 1];
         String[] tempConName = new String[conName.length + 1];
@@ -136,7 +135,11 @@ class Finaltest {
         System.out.println("\nContact has been added successfully!\n");
     }
 
-    public static void updateContact(){}
+    public static void updateContact() {
+        System.out.println("+---------------------------------------------------------------+");
+        System.out.println("|                   Update Contacts                     |");
+        System.out.println("+---------------------------------------------------------------+");
+    }
 
     public static void printMenu() {
         Scanner input = new Scanner(System.in);
@@ -189,7 +192,7 @@ class Finaltest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         printMenu();
-        System.out.println( conId[0]);
+        System.out.println(conId[0]);
 
     }
 }
