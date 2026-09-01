@@ -182,9 +182,9 @@ class Finaltest {
                 printContact();
                 // printMenu();
                 break;
-            case 2 :{
-                updateContact();
             }
+        case 2 :{
+                updateContact();
             }
         }
     }
