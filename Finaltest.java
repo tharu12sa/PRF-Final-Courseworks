@@ -135,10 +135,16 @@ class Finaltest {
         System.out.println("\nContact has been added successfully!\n");
     }
 
+    public static void searchContac(){
+        System.out.print("");
+    }
+
     public static void updateContact() {
         System.out.println("+---------------------------------------------------------------+");
         System.out.println("|                   Update Contacts                     |");
         System.out.println("+---------------------------------------------------------------+");
+        System.out.println();
+        searchContac();
     }
 
     public static void printMenu() {
