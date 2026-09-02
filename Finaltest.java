@@ -136,7 +136,22 @@ class Finaltest {
     }
 
     public static void searchContac(){
-        System.out.print("");
+        Scanner input = new Scanner(System.in);
+        System.out.print("search contac by Name or Phone number");
+        System.out.println();
+        System.out.print("\n");
+        System.out.println("[01] search Name");
+        System.out.println("[02] search Phone-Number");
+        System.out.print("select number :");
+        int search = input.nextInt();
+
+        switch(search){
+            case 1:{
+                System.out.print("Enter Name :=");
+                int 
+
+            }
+        }
     }
 
     public static void updateContact() {
