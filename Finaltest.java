@@ -12,7 +12,7 @@ class Finaltest {
     public static Scanner input = new Scanner(System.in);
 
     public static String ContactID() {
-        return String.format("C%04d", contactID);
+        return String.format("C%04d", contactID + 1);
     }
 
     public static String birthDay() {
@@ -27,11 +27,10 @@ class Finaltest {
                     System.out.println("\t\tInvalid Birthday!");
                     System.out.print("Do you want Birthday again (Y/N) : ");
                     char answer = input.nextLine().charAt(0);
-                    input.nextLine(); // clear buffer
 
                     if (answer == 'y' || answer == 'Y') {
                         continue;
-                    } else if (answer == 'n' || answer == 'N') {
+                    } else {
                         return null;
                     }
                 } else {
@@ -42,7 +41,6 @@ class Finaltest {
                 System.out.println("\t\tInvalid Birthday Format!");
                 System.out.print("Do you want Birthday again (Y/N) : ");
                 char answer = input.nextLine().charAt(0);
-                input.nextLine(); // clear buffer
 
                 if (answer == 'y' || answer == 'Y') {
                     continue;
@@ -65,10 +63,10 @@ class Finaltest {
             System.out.println("\t\tInValid Phone Number");
             System.out.print("Do you want add phone number again (Y/N) : ");
             char answer = input.nextLine().charAt(0);
+
             if (answer == 'y' || answer == 'Y') {
                 continue;
-            } else if (answer == 'n' || answer == 'N') {
-                printMenu();
+            } else {
                 return null;
             }
         }
@@ -101,10 +99,11 @@ class Finaltest {
         conPhoneNumber = tempConPhoneNumber;
         conCompany = tempConCompany;
         conBirthday = tempConBirthday;
+        
+        contactID++; // Contact සාර්ථකව add වූ පසු පමණක් increment කරන්න
     }
 
     public static void printContact() {
-        contactID++;
         String id = ContactID();
 
         System.out.println("+---------------------------------------------------------------+");
@@ -118,7 +117,6 @@ class Finaltest {
 
         String phonenumber = PhoneNumber();
         if (phonenumber == null) {
-            contactID--;
             return;
         }
 
@@ -127,7 +125,6 @@ class Finaltest {
 
         String birthday = birthDay();
         if (birthday == null) {
-            contactID--;
             return;
         }
 
@@ -135,86 +132,87 @@ class Finaltest {
         System.out.println("\nContact has been added successfully!\n");
     }
 
-    public static void searchContac(){
-        Scanner input = new Scanner(System.in);
-        System.out.print("search contac by Name or Phone number");
-        System.out.println();
-        System.out.print("\n");
+    public static void searchContac() {
+        System.out.println("search contact by Name or Phone number\n");
         System.out.println("[01] search Name");
         System.out.println("[02] search Phone-Number");
         System.out.print("select number :");
         int search = input.nextInt();
+        input.nextLine(); // clear buffer
 
-        switch(search){
-            case 1:{
-                System.out.print("Enter Name :=");
-                int 
-
+        switch (search) {
+            case 1: {
+                System.out.print("Enter Name : ");
+                String searchName = input.nextLine();
+                boolean found = false;
+                for (int i = 0; i < conName.length; i++) {
+                    if (conName[i].equalsIgnoreCase(searchName)) {
+                        System.out.println("ID : " + conId[i]);
+                        System.out.println("Phone : " + conPhoneNumber[i]);
+                        System.out.println("Company : " + conCompany[i]);
+                        System.out.println("Birthday : " + conBirthday[i]);
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    System.out.println("Contact not found!");
+                }
+                break;
             }
         }
     }
 
     public static void updateContact() {
         System.out.println("+---------------------------------------------------------------+");
-        System.out.println("|                   Update Contacts                     |");
+        System.out.println("|                   Update Contacts                             |");
         System.out.println("+---------------------------------------------------------------+");
         System.out.println();
         searchContac();
     }
 
     public static void printMenu() {
-        Scanner input = new Scanner(System.in);
-        // iFRIEND Header
-        System.out.println(" /$$ /$$$$$$$$ /$$$$$$$  /$$$$$$ /$$$$$$$$ /$$   /$$ /$$$$$$$ ");
-        System.out.println("|__/| $$_____/| $$__  $$|_  $$_/| $$_____/| $$$ | $$| $$__  $$");
-        System.out.println(" /$$| $$      | $$  \\ $$  | $$  | $$      | $$$$| $$| $$  \\ $$");
-        System.out.println("| $$| $$$$$   | $$$$$$$/  | $$  | $$$$$   | $$ $$ $$| $$  | $$");
-        System.out.println("| $$| $$__/   | $$__  $$  | $$  | $$__/   | $$  $$$$| $$  | $$");
-        System.out.println("| $$| $$      | $$  \\ $$  | $$  | $$      | $$\\  $$$| $$  | $$");
-        System.out.println("| $$| $$$$$$$$| $$  | $$ /$$$$$$| $$$$$$$$| $$ \\  $$| $$$$$$$/");
-        System.out.println("|__/|________/|__/  |__/|______/|________/|__/  \\__/|_______/ ");
+        while (true) {
+            System.out.println(" /$$ /$$$$$$$$ /$$$$$$$  /$$$$$$ /$$$$$$$$ /$$   /$$ /$$$$$$$ ");
+            System.out.println("|__/| $$_____/| $$__  $$|_  $$_/| $$_____/| $$$ | $$| $$__  $$");
+            System.out.println(" /$$| $$      | $$  \\ $$  | $$  | $$      | $$$$| $$| $$  \\ $$");
+            System.out.println("| $$| $$$$$   | $$$$$$$/  | $$  | $$$$$   | $$ $$ $$| $$  | $$");
+            System.out.println("| $$| $$__/   | $$__  $$  | $$  | $$__/   | $$  $$$$| $$  | $$");
+            System.out.println("| $$| $$      | $$  \\ $$  | $$  | $$      | $$\\  $$$| $$  | $$");
+            System.out.println("| $$| $$$$$$$$| $$  | $$ /$$$$$$| $$$$$$$$| $$ \\  $$| $$$$$$$/");
+            System.out.println("|__/|________/|__/  |__/|______/|________/|__/  \\__/|_______/ ");
+            System.out.println();
+            System.out.println("====================================================================================================");
+            System.out.println("[01] ADD contacts");
+            System.out.println("[02] UPDATE contacts");
+            System.out.println("[03] DELETE contacts");
+            System.out.println("[04] SEARCH contacts");
+            System.out.println("[05] LIST contacts");
+            System.out.println("[06] EXIT");
+            System.out.println();
+            System.out.print("ENTER Menu :");
+            
+            int num = input.nextInt();
+            input.nextLine(); // clear buffer after nextInt()
 
-        System.out.println();
-
-        // Contacts Organizer Text
-        System.out.println("  ___                  _                     ()");
-        System.out.println(" / __|___ _ _  ___  __| |_ ___              /  \\ _ _  __ _ _ _  _ _____ ___ _ _ ");
-        System.out.println("| (__/ _ \\ ' \\/ _ \\/ _` |  _(_-<  ___ ___   | () | '_/ _` | '  \\| |_  // -_) '_|");
-        System.out.println(" \\___\\___/_||_\\___/\\__,_|\\__|/__/           \\__/|_| \\__,_|_|_|_|_/__/\\___|_|  ");
-        System.out.println("                                                    |___/                       ");
-
-        // Bottom Line
-        System.out.println(
-                "====================================================================================================");
-        System.out.println();
-        System.out.println();
-        System.out.println("[01] ADD contacts");
-        System.out.println("[02] UPDATE contacts");
-        System.out.println("[03] DELETE contacts");
-        System.out.println("[04] SEARCH contacts");
-        System.out.println("[05] LIST contacts");
-        System.out.println("[06] EXIT");
-        System.out.println();
-        System.out.print("ENTER Menu :");
-        int num = input.nextInt();
-
-        switch (num) {
-            case 1: {
-                printContact();
-                // printMenu();
-                break;
-            }
-        case 2 :{
-                updateContact();
-                break;
+            switch (num) {
+                case 1:
+                    printContact();
+                    break;
+                case 2:
+                    updateContact();
+                    break;
+                case 4:
+                    searchContac();
+                    break;
+                case 6:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Option!");
             }
         }
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         printMenu();
-        // System.out.println(conId[0]);
-
     }
 }
