@@ -147,11 +147,16 @@ class Finaltest {
                 boolean found = false;
                 for (int i = 0; i < conName.length; i++) {
                     if (conName[i].equalsIgnoreCase(searchName)) {
-                        System.out.println("--------------||----------------------");
-                        System.out.println("\tID\t || " + conId[i]);
-                        System.out.println("\tPhone\t || " + conPhoneNumber[i]);
-                        System.out.println("\tCompany\t || " + conCompany[i]);
-                        System.out.println("\tBirthday\t || " + conBirthday[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "ID", conId[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Phone", conPhoneNumber[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Company", conCompany[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Birthday", conBirthday[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.println();
                         found = true;
                     }
                 }
