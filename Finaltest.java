@@ -99,7 +99,7 @@ class Finaltest {
         conPhoneNumber = tempConPhoneNumber;
         conCompany = tempConCompany;
         conBirthday = tempConBirthday;
-        
+
         contactID++; // Contact සාර්ථකව add වූ පසු පමණක් increment කරන්න
     }
 
@@ -147,10 +147,11 @@ class Finaltest {
                 boolean found = false;
                 for (int i = 0; i < conName.length; i++) {
                     if (conName[i].equalsIgnoreCase(searchName)) {
-                        System.out.println("ID : " + conId[i]);
-                        System.out.println("Phone : " + conPhoneNumber[i]);
-                        System.out.println("Company : " + conCompany[i]);
-                        System.out.println("Birthday : " + conBirthday[i]);
+                        System.out.println("--------------||----------------------");
+                        System.out.println("\tID\t || " + conId[i]);
+                        System.out.println("\tPhone\t || " + conPhoneNumber[i]);
+                        System.out.println("\tCompany\t || " + conCompany[i]);
+                        System.out.println("\tBirthday\t || " + conBirthday[i]);
                         found = true;
                     }
                 }
@@ -181,7 +182,8 @@ class Finaltest {
             System.out.println("| $$| $$$$$$$$| $$  | $$ /$$$$$$| $$$$$$$$| $$ \\  $$| $$$$$$$/");
             System.out.println("|__/|________/|__/  |__/|______/|________/|__/  \\__/|_______/ ");
             System.out.println();
-            System.out.println("====================================================================================================");
+            System.out.println(
+                    "====================================================================================================");
             System.out.println("[01] ADD contacts");
             System.out.println("[02] UPDATE contacts");
             System.out.println("[03] DELETE contacts");
@@ -190,7 +192,7 @@ class Finaltest {
             System.out.println("[06] EXIT");
             System.out.println();
             System.out.print("ENTER Menu :");
-            
+
             int num = input.nextInt();
             input.nextLine(); // clear buffer after nextInt()
 
