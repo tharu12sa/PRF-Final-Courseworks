@@ -100,7 +100,7 @@ class Finaltest {
         conCompany = tempConCompany;
         conBirthday = tempConBirthday;
 
-        contactID++; // Contact සාර්ථකව add වූ පසු පමණක් increment කරන්න
+        contactID++;
     }
 
     public static void printContact() {
