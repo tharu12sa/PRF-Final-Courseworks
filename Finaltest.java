@@ -187,8 +187,7 @@ class Finaltest {
             System.out.println("| $$| $$$$$$$$| $$  | $$ /$$$$$$| $$$$$$$$| $$ \\  $$| $$$$$$$/");
             System.out.println("|__/|________/|__/  |__/|______/|________/|__/  \\__/|_______/ ");
             System.out.println();
-            System.out.println(
-                    "====================================================================================================");
+            System.out.println("====================================================================================================");
             System.out.println("[01] ADD contacts");
             System.out.println("[02] UPDATE contacts");
             System.out.println("[03] DELETE contacts");
