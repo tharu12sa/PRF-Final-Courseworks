@@ -175,6 +175,13 @@ class Finaltest {
         System.out.println();
         int id = searchContac();
         System.out.println();
+        System.out.println();
+        System.out.println("(1) Change name");
+        System.out.println("(2) Change ID");
+        System.out.println("(3) Change PhoneNumber");
+        System.out.println("(4) Change CompanyName");
+        System.out.println("(5) Change Birthday");
+        System.out.println();
 
     }
 
