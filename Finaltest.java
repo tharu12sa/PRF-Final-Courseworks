@@ -182,6 +182,16 @@ class Finaltest {
         System.out.println("(4) Change CompanyName");
         System.out.println("(5) Change Birthday");
         System.out.println();
+        System.out.print("Enter number:  ");
+        int update = input.nextInt();
+        switch(update){
+            case 1:
+                System.out.print("Enter new Name : ");
+                String name = input.nextLine();
+                conId[id] = name ;
+
+        }
+
 
     }
 
