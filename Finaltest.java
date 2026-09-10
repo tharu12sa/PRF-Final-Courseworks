@@ -144,7 +144,7 @@ class Finaltest {
             case 1: {
                 System.out.print("Enter Name : ");
                 String searchName = input.nextLine();
-                boolean found = false;
+                // boolean found = false;
                 for (int i = 0; i < conName.length; i++) {
                     if (conName[i].equalsIgnoreCase(searchName)) {
                         System.out.println("+-----------------+---------------------------------+");
@@ -157,13 +157,18 @@ class Finaltest {
                         System.out.printf("| %-15s | %-31s |\n", "Birthday", conBirthday[i]);
                         System.out.println("+-----------------+---------------------------------+");
                         System.out.println();
-                        found = true;
+                        // found = true;
                         return i;
+                    } else {
+                        System.out.println("invalid name ");
                     }
                 }
 
                 break;
             }
+        // case 2: {
+
+        // }
         }
         return -1;
     }
@@ -187,8 +192,9 @@ class Finaltest {
         switch(update){
             case 1:
                 System.out.print("Enter new Name : ");
-                String name = input.nextLine();
-                conId[id] = name ;
+                String name = input.next();
+                System.out.println();
+                conName[id] = name ;
 
         }
 
