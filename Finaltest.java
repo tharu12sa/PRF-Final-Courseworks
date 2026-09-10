@@ -132,7 +132,7 @@ class Finaltest {
         System.out.println("\nContact has been added successfully!\n");
     }
 
-    public static void searchContac() {
+    public static int searchContac() {
         System.out.println("search contact by Name or Phone number\n");
         System.out.println("[01] search Name");
         System.out.println("[02] search Phone-Number");
@@ -158,14 +158,14 @@ class Finaltest {
                         System.out.println("+-----------------+---------------------------------+");
                         System.out.println();
                         found = true;
+                        return i;
                     }
                 }
-                if (!found) {
-                    System.out.println("Contact not found!");
-                }
+
                 break;
             }
         }
+        return -1;
     }
 
     public static void updateContact() {
@@ -173,7 +173,9 @@ class Finaltest {
         System.out.println("|                   Update Contacts                             |");
         System.out.println("+---------------------------------------------------------------+");
         System.out.println();
-        searchContac();
+        int id = searchContac();
+        System.out.println();
+
     }
 
     public static void printMenu() {
@@ -187,7 +189,8 @@ class Finaltest {
             System.out.println("| $$| $$$$$$$$| $$  | $$ /$$$$$$| $$$$$$$$| $$ \\  $$| $$$$$$$/");
             System.out.println("|__/|________/|__/  |__/|______/|________/|__/  \\__/|_______/ ");
             System.out.println();
-            System.out.println("====================================================================================================");
+            System.out.println(
+                    "====================================================================================================");
             System.out.println("[01] ADD contacts");
             System.out.println("[02] UPDATE contacts");
             System.out.println("[03] DELETE contacts");
