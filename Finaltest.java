@@ -167,7 +167,21 @@ class Finaltest {
                 break;
             }
         // case 2: {
-
+            System.out.print("Enter PhoneNumber : ");
+                String searchphoneNumber = input.nextLine();
+                // boolean found = false;
+                for (int i = 0; i < conPhoneNumber.length; i++) {
+                    if (conPhoneNumber[i].equalsIgnoreCase(searchphoneNumber)) {
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "ID", conId[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Name", conName[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Company", conCompany[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.printf("| %-15s | %-31s |\n", "Birthday", conBirthday[i]);
+                        System.out.println("+-----------------+---------------------------------+");
+                        System.out.println();
         // }
         }
         return -1;
