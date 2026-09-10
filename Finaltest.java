@@ -160,13 +160,14 @@ class Finaltest {
                         // found = true;
                         return i;
                     } else {
+                        System.out.println();
                         System.out.println("invalid name ");
                     }
                 }
 
                 break;
             }
-         case 2: {
+        case 2: {
             System.out.print("Enter PhoneNumber : ");
                 String searchphoneNumber = input.nextLine();
                 // boolean found = false;
