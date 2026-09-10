@@ -166,7 +166,7 @@ class Finaltest {
 
                 break;
             }
-        // case 2: {
+         case 2: {
             System.out.print("Enter PhoneNumber : ");
                 String searchphoneNumber = input.nextLine();
                 // boolean found = false;
@@ -182,9 +182,14 @@ class Finaltest {
                         System.out.printf("| %-15s | %-31s |\n", "Birthday", conBirthday[i]);
                         System.out.println("+-----------------+---------------------------------+");
                         System.out.println();
-        // }
+                        return i;
+                    }
+            }
+            break;
         }
-        return -1;
+    
+        }
+        return  -1;
     }
 
     public static void updateContact() {
